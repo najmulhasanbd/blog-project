@@ -4,12 +4,11 @@ use App\Http\Controllers\Frontend\BlogController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\PrivacyController;
 use App\Http\Controllers\Frontend\TermsController;
+use App\Http\Controllers\Frontend\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('frontend.welcome');
-});
 
+Route::get('/',[WelcomeController::class,'index'])->name('welcome.index');
 
 Route::get('blogs',[BlogController::class,'index'])->name('blogs.index');
 

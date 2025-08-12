@@ -41,7 +41,7 @@
     @include('frontend.layouts.partials.header')
     <!-- ======================= Header End  ============================ -->
     <!-- ======================= slider section  ============================ -->
-    <div class="slider_section bg-white overflow-hidden pt-4 pb-4">
+    {{-- <div class="slider_section bg-white overflow-hidden pt-4 pb-4">
         <div class="container">
             <div class="row g-4">
                 <!-- Left side large banner -->
@@ -89,7 +89,7 @@
             </div>
 
         </div>
-    </div>
+    </div> --}}
     <!-- ======================= slider End  ============================ -->
     <!-- banner advertisement start -->
     <div class="blog_section bg-white overflow-hidden pt-4 pb-4">
