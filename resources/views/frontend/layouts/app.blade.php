@@ -93,26 +93,13 @@
     <!-- ======================= slider End  ============================ -->
     <!-- banner advertisement start -->
     <div class="blog_section bg-white overflow-hidden pt-4 pb-4">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-12 mt-0">
-                    <a href="#">
-                        <div class="ad-banner">
-                            <img src="{{ asset('frontend') }}/assets/images/banner.png" alt="Advertisement"
-                                class="ad-image">
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+
 
         <!-- banner advertisement end -->
         <!-- ======================= Blog Start  ============================ -->
-        <div class="blog_section bg-white overflow-hidden pt-4 pb-4">
-            <div class="container">
-                @yield('content')
-            </div>
-        </div>
+
+        @yield('content')
+
         <!-- ======================= Blog End  ============================ -->
 
         <!-- ======================= Footer Start  ========================== -->
