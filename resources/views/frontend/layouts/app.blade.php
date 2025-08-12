@@ -38,7 +38,7 @@
 
 <body>
     <!-- ======================= Header Start  ============================ -->
-    @include('layouts.partials.header')
+    @include('frontend.layouts.partials.header')
     <!-- ======================= Header End  ============================ -->
     <!-- ======================= slider section  ============================ -->
     <div class="slider_section bg-white overflow-hidden pt-4 pb-4">
@@ -115,7 +115,7 @@
         <!-- ======================= Blog End  ============================ -->
 
         <!-- ======================= Footer Start  ========================== -->
-        @include('layouts.partials.footer')
+        @include('frontend.layouts.partials.footer')
         <!-- ======================= Footer End  ============================ -->
 
         <!-- scroll to top -->
