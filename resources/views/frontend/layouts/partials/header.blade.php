@@ -22,7 +22,7 @@
                              <a class="nav-link" href="{{ route('blogs.index') }}">Blog</a>
                          </li>
                          <li class="nav-item me-3">
-                             <a class="nav-link" href="contact.html">Contact</a>
+                             <a class="nav-link" href="{{ route('contact.index') }}">Contact</a>
                          </li>
                          <li class="nav-item">
                              <!-- Search Form -->
@@ -58,7 +58,7 @@
                          <a class="nav-link" href="{{ route('blogs.index') }}">Blog</a>
                      </li>
                      <li class="nav-item">
-                         <a class="nav-link" href="contact.html">Contact</a>
+                         <a class="nav-link" href="{{ route('contact.index') }}">Contact</a>
                      </li>
                  </ul>
              </div>

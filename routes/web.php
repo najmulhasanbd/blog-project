@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Frontend\BlogController;
+use App\Http\Controllers\Frontend\ContactController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -9,3 +10,5 @@ Route::get('/', function () {
 
 
 Route::get('blogs',[BlogController::class,'index'])->name('blogs.index');
+
+Route::get('contact-us',[ContactController::class,'index'])->name('contact.index');

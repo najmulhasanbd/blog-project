@@ -19,21 +19,21 @@
     <meta name="description" content="top business news blog.">
     <meta name="keywords" content="blog, business">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{asset('frontend')}}/assets/images/favicon.png">
+    <link rel="icon" type="image/png" href="{{ asset('frontend') }}/assets/images/favicon.png">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <!-- Css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/flatpickr.min.css">
-    <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/lightgallery.min.css">
-    <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/intlTelInput.css">
-    <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/select2.min.css">
-    <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/select2-bootstrap-5-theme.min.css">
-    <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/main.css">
-    <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/responsive.css">
+    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/flatpickr.min.css">
+    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/lightgallery.min.css">
+    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/intlTelInput.css">
+    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/select2.min.css">
+    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/select2-bootstrap-5-theme.min.css">
+    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/main.css">
+    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/responsive.css">
 </head>
 
 <body>
@@ -98,7 +98,8 @@
                 <div class="col-12 mt-0">
                     <a href="#">
                         <div class="ad-banner">
-                            <img src="{{asset('frontend')}}/assets/images/banner.png" alt="Advertisement" class="ad-image">
+                            <img src="{{ asset('frontend') }}/assets/images/banner.png" alt="Advertisement"
+                                class="ad-image">
                         </div>
                     </a>
                 </div>
@@ -124,16 +125,16 @@
         </div>
 
         <!-- Js -->
-        <script src="{{asset('frontend')}}/assets/js/jquery.min.js"></script>
-        <script src="{{asset('frontend')}}/assets/js/lightgallery.min.js"></script>
-        <script src="{{asset('frontend')}}/assets/js/owlcarousel.min.js"></script>
-        <script src="{{asset('frontend')}}/assets/js/flatpickr.min.js"></script>
-        <script src="{{asset('frontend')}}/assets/js/select2.min.js"></script>
-        <script src="{{asset('frontend')}}/assets/js/intlTelInput.js"></script>
-        <script src="{{asset('frontend')}}/assets/js/intlTelInput-jquery.js"></script>
-        <script src="{{asset('frontend')}}/assets/js/swiper-bundle.min.js"></script>
-        <script src="{{asset('frontend')}}/assets/js/bootstrap.min.js"></script>
-        <script src="{{asset('frontend')}}/assets/js/main.js"></script>
+        <script src="{{ asset('frontend') }}/assets/js/jquery.min.js"></script>
+        <script src="{{ asset('frontend') }}/assets/js/lightgallery.min.js"></script>
+        <script src="{{ asset('frontend') }}/assets/js/owlcarousel.min.js"></script>
+        <script src="{{ asset('frontend') }}/assets/js/flatpickr.min.js"></script>
+        <script src="{{ asset('frontend') }}/assets/js/select2.min.js"></script>
+        <script src="{{ asset('frontend') }}/assets/js/intlTelInput.js"></script>
+        <script src="{{ asset('frontend') }}/assets/js/intlTelInput-jquery.js"></script>
+        <script src="{{ asset('frontend') }}/assets/js/swiper-bundle.min.js"></script>
+        <script src="{{ asset('frontend') }}/assets/js/bootstrap.min.js"></script>
+        <script src="{{ asset('frontend') }}/assets/js/main.js"></script>
 
 </body>
 
