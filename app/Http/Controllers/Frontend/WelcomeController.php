@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
+use App\Models\Post;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class WelcomeController extends Controller
 {
     public function index(){
-        return view('frontend.welcome');
+        $blogs=Post::latest()->get();
+        return view('frontend.welcome',compact('blogs'));
     }
 }

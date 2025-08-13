@@ -100,10 +100,13 @@
                                    <h3>Latest Post</h3>
                                </div>
                                <div class="links">
+                                   @php
+                                       $posts = \App\Models\Post::latest()->limit(3)->get();
+                                   @endphp
                                    <ul>
-                                       <li><a href="#">BMW car price updated 2024</a></li>
-                                       <li><a href="#">BMW ECU Cloning</a></li>
-                                       <li><a href="">ECU Remaping of Toyota</a></li>
+                                    @foreach ($posts as $item)
+                                    <li><a href="{{ $item->id }}">{{$item->title}}</a></li>
+                                    @endforeach
                                    </ul>
                                </div>
                            </div>

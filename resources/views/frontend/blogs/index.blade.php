@@ -33,42 +33,7 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-xl-3 order-xl-2">
-                    <div class="blog_sidebar">
-                        <div class="p-3 p-xl-4 border rounded">
-                            <div class="card_header mb-4">
-                                <h3>Categories</h3>
-                            </div>
-                            <div class="categories_list">
-                                <ul>
-                                    <li><a href="#">Technology</a></li>
-                                    <li><a href="#">Health & Wellness</a></li>
-                                    <li><a href="#">Travel</a></li>
-                                    <li><a href="#">Food & Recipes</a></li>
-                                    <li><a href="#">Lifestyle</a></li>
-                                    <li><a href="#">Finance</a></li>
-                                    <li><a href="#">Education</a></li>
-                                    <li><a href="#">Entertainment</a></li>
-                                    <li><a href="#">Sports</a></li>
-                                    <li><a href="#">Fashion</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="p-3 p-xl-4 border rounded mt-2">
-                            <div class="card_header mb-4">
-                                <h3>Latest Posts</h3>
-                            </div>
-                            <div class="latestpost_list">
-                                <ul>
-                                    <li><a href="#">BMW car price updated 2024</a></li>
-                                    <li><a href="#">BMW ECU Cloning</a></li>
-                                    <li><a href="#">ECU Remaping of Toyota</a></li>
-                                    <li><a href="#">BMW car price updated 2024</a></li>
-                                    <li><a href="#">BMW ECU Cloning</a></li>
-                                    <li><a href="#">ECU Remaping of Toyota</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    @include('frontend.layouts.partials.sidebar')
                 </div>
                 <div class="col-xl-9 order-xl-1">
                     <div class="blog_wrapper">
