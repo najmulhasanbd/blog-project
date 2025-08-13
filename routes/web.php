@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[WelcomeController::class,'index'])->name('welcome.index');
 
 Route::get('blogs',[BlogController::class,'index'])->name('blogs.index');
+Route::get('blog/{slug}',[BlogController::class,'show'])->name('blogs.show');
 
 Route::get('contact-us',[ContactController::class,'index'])->name('contact.index');
 

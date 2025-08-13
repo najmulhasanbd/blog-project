@@ -10,7 +10,15 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $blogs=Post::latest()->get();
-        return view('frontend.blogs.index',compact('blogs'));
+        $blogs = Post::latest()->get();
+        return view('frontend.blogs.index', compact('blogs'));
+    }
+
+    public function show($slug)
+    {
+        $blog = Post::where('slug', $slug)->firstOrFail();
+        $relatedPost=Post::where('category_id',$blog->category_id)->where('id','!=',$blog->id)->get();
+
+        return view('frontend.blogs.show', compact('blog','relatedPost'));
     }
 }

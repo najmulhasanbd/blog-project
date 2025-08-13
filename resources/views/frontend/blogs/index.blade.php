@@ -42,7 +42,7 @@
                                 <div class="col-md-6">
                                     <div class="blog_post p-3 p-lg-4 card h-100 bg-transparent shadow-sm border-opacity-10">
                                         <div class="blog_img mb-4 position-relative">
-                                            <a href="details.html">
+                                            <a href="{{ route('blogs.show', $item->slug) }}">
                                                 <img class="img-fluid rounded z-3"
                                                     src="{{ asset('frontend') }}/assets/images/blog/car.jpg"
                                                     alt="Health & Wellness">
@@ -83,15 +83,17 @@
                                                 </div>
                                             </div>
                                             <h3 class="mb-3">
-                                                <a href="details.html">{{ $item->title }}</a>
+                                                <a
+                                                    href="{{ route('blogs.show', $item->slug) }}">{{ \Illuminate\Support\Str::limit($item->title, 70) }}</a>
                                             </h3>
                                             <div class="blog_desc mb-2">
-                                                {!! $item->description !!}
+                                                {!! \Illuminate\Support\Str::limit($item->description, 80) !!}
                                             </div>
                                         </div>
                                         <hr>
                                         <div class="card-footer mt-2 bg-transparent border-0 blog_content p-0">
-                                            <a class="learn_more" href="details.html">Read More</a>
+                                            <a class="learn_more" href="{{ route('blogs.show', $item->slug) }}">Read
+                                                More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -113,7 +115,6 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </div>
