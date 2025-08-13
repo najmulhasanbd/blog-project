@@ -105,7 +105,7 @@
                                    @endphp
                                    <ul>
                                     @foreach ($posts as $item)
-                                    <li><a href="{{ $item->id }}">{{$item->title}}</a></li>
+                                    <li><a href="{{ route('blogs.show',$item->slug) }}">{{$item->title}}</a></li>
                                     @endforeach
                                    </ul>
                                </div>
