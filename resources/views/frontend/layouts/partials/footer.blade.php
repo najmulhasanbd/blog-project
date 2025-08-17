@@ -10,16 +10,32 @@
                        </div>
                    </div>
                    <div class="newsletter-form">
-                       <form action="#" method="post">
+                       <form action="{{ route('subscribe.store') }}" method="post">
+                           @csrf
                            <div class="input-group">
                                <input name="email" type="email" class="form-control shadow-none"
-                                   placeholder="Enter your email address" required="">
+                                   placeholder="Enter your email address" required>
                                <button type="submit" class="input-group-text bg-primary border-primary text-white">
                                    Subscribe
-                                   <img src="{{ asset('frontend') }}/assets/images/icons/subscribe.svg" alt="Subscribe">
+                                   <img src="{{ asset('frontend/assets/images/icons/subscribe.svg') }}" alt="Subscribe">
                                </button>
                            </div>
                        </form>
+
+                       {{-- Success Message --}}
+                       @if (session('success'))
+                           <div class="alert alert-success mt-2">
+                               {{ session('success') }}
+                           </div>
+                       @endif
+
+                       {{-- Error Message --}}
+                       @if ($errors->any())
+                           <div class="alert alert-danger mt-2">
+                               {{ $errors->first('email') }}
+                           </div>
+                       @endif
+
                    </div>
                </div>
            </div>
@@ -41,7 +57,9 @@
                                        </div>
                                        <div>
                                            <h5>For Support</h5>
-                                           <h6><a href="tel:+393246822222">+88 01234567895</a></h6>
+                                           <h6><a
+                                                   href="tel:{{ getSiteSetting()->phone }}">{{ getSiteSetting()->phone }}</a>
+                                           </h6>
                                        </div>
                                    </div>
                                    <div class="site_info d-flex align-items-center mb-4">
@@ -51,29 +69,30 @@
                                        </div>
                                        <div>
                                            <h5>Send Us Email</h5>
-                                           <h6><a href="mailto:info@blog.com">info@blog.com</a>
+                                           <h6><a
+                                                   href="mailto:{{ getSiteSetting()->email }}">{{ getSiteSetting()->email }}</a>
                                            </h6>
                                        </div>
                                    </div>
                                </div>
                                <ul class="social-icons">
                                    <li>
-                                       <a href="#" title="facebook" target="_blank">
+                                       <a href="{{ getSiteSetting()->fb }}" title="facebook" target="_blank">
                                            <i class="fab fa-facebook-f"></i>
                                        </a>
                                    </li>
                                    <li>
-                                       <a href="#" title="instagram" target="_blank">
+                                       <a href="{{ getSiteSetting()->instagram }}" title="instagram" target="_blank">
                                            <i class="fab fa-instagram"></i>
                                        </a>
                                    </li>
                                    <li>
-                                       <a href="#" title="twitter" target="_blank">
+                                       <a href="{{ getSiteSetting()->twitter }}" title="twitter" target="_blank">
                                            <i class="fab fa-x-twitter"></i>
                                        </a>
                                    </li>
                                    <li>
-                                       <a href="#" title="youtube" target="_blank">
+                                       <a href="{{ getSiteSetting()->youtube }}" title="youtube" target="_blank">
                                            <i class="fab fa-youtube"></i>
                                        </a>
                                    </li>
@@ -104,9 +123,10 @@
                                        $posts = \App\Models\Post::latest()->limit(3)->get();
                                    @endphp
                                    <ul>
-                                    @foreach ($posts as $item)
-                                    <li><a href="{{ route('blogs.show',$item->slug) }}">{{$item->title}}</a></li>
-                                    @endforeach
+                                       @foreach ($posts as $item)
+                                           <li><a href="{{ route('blogs.show', $item->slug) }}">{{ $item->title }}</a>
+                                           </li>
+                                       @endforeach
                                    </ul>
                                </div>
                            </div>

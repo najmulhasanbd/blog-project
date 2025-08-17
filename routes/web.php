@@ -1,12 +1,13 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\BlogController;
-use App\Http\Controllers\Frontend\CategoryController;
+use App\Http\Controllers\Frontend\TermsController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\PrivacyController;
-use App\Http\Controllers\Frontend\TermsController;
 use App\Http\Controllers\Frontend\WelcomeController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Frontend\CategoryController;
+use App\Http\Controllers\Frontend\SubscribeController;
 
 
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome.index');
@@ -20,3 +21,5 @@ Route::get('contact-us', [ContactController::class, 'index'])->name('contact.ind
 
 Route::get('privacy-policy', [PrivacyController::class, 'index'])->name('privacy.index');
 Route::get('terms-condition', [TermsController::class, 'index'])->name('terms.index');
+Route::post('/subscribe', [SubscribeController::class, 'store'])->name('subscribe.store');
+

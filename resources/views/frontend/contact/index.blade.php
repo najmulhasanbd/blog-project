@@ -21,13 +21,13 @@
                 <div class="col-xl-4 col-md-6">
                     <div class="contact_item shadow-sm d-flex align-items-center">
                         <div class="contact_icon me-3">
-                            <img src="{{asset('frontend')}}/assets/images/icons/phone-dark.svg" alt="Phone">
+                            <img src="{{ asset('frontend') }}/assets/images/icons/phone-dark.svg" alt="Phone">
                         </div>
                         <div class="contact_body">
                             <h5 class="contact_title mb-2">Phone</h5>
                             <ul class="contact_info">
                                 <li>
-                                    <a href="Tel:+393246822222">+88 01234567895</a>
+                                    <a href="Tel:{{ getSiteSetting()->phone }}">{{ getSiteSetting()->phone }}</a>
                                 </li>
                             </ul>
                         </div>
@@ -36,13 +36,13 @@
                 <div class="col-xl-4 col-md-6">
                     <div class="contact_item shadow-sm d-flex align-items-center">
                         <div class="contact_icon me-3">
-                            <img src="{{asset('frontend')}}/assets/images/icons/email-dark.svg" alt="Email">
+                            <img src="{{ asset('frontend') }}/assets/images/icons/email-dark.svg" alt="Email">
                         </div>
                         <div class="contact_body">
                             <h5 class="contact_title mb-2">Email</h5>
                             <ul class="contact_info">
                                 <li>
-                                    <a href="mailto:info@blog.com">info@blog.com</a>
+                                    <a href="mailto:{{ getSiteSetting()->email }}">{{ getSiteSetting()->email }}</a>
                                 </li>
                             </ul>
                         </div>
@@ -51,12 +51,12 @@
                 <div class="col-xl-4 col-md-8">
                     <div class="contact_item shadow-sm d-flex align-items-center">
                         <div class="contact_icon me-3">
-                            <img src="{{asset('frontend')}}/assets/images/icons/location.svg" alt="Address">
+                            <img src="{{ asset('frontend') }}/assets/images/icons/location.svg" alt="Address">
                         </div>
                         <div class="contact_body">
                             <h5 class="contact_title mb-2">Address</h5>
                             <ul class="contact_info">
-                                <li>Dhaka, Bangladesh</li>
+                                <li>{{ getSiteSetting()->address }}</li>
                             </ul>
                         </div>
                     </div>
