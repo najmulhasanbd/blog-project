@@ -64,8 +64,15 @@
             </div>
             <div class="row gy-5">
                 <div class="col-xl-6">
+                    @if (session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+
                     <div class="contact_form">
-                        <form class="row" action="#" method="post">
+                        <form class="row" action="{{ route('contact.store') }}" method="post">
+                            @csrf
                             <div class="col-md-6 mb-3">
                                 <label for="name" class="form-label form--label">Name <span
                                         class="text-danger">*</span></label>
@@ -81,7 +88,7 @@
                             <div class="col-md-12 mb-3">
                                 <label for="subject" class="form-label form--label">Subject <span
                                         class="text-danger">*</span></label>
-                                <input type="text" name="subject" id="subject" placeholder="Write your subject"
+                                <input type="text" name="subjects" id="subject" placeholder="Write your subject"
                                     class="form-control shadow-none" required="">
                             </div>
                             <div class="col-md-12 mb-3">
